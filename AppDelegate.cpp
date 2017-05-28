@@ -5,6 +5,7 @@
 #include "AnimationBaseTest.h"
 #include "Knight.h"
 #include "CoreElement.h"
+#include "DragonBonesTest.h"
 
 USING_NS_CC;
 
@@ -36,7 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
+    director->getOpenGLView()->setDesignResolutionSize(1024, 768, ResolutionPolicy::FIXED_HEIGHT);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -52,7 +53,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //auto scene = AnimationBaseTest::createScene();
     //auto scene = KnightGame::createScene();
     auto scene = CoreElementGame::createScene();
-
+    //auto scene = DragonBonesTest::createTestScene();
     // run
     director->runWithScene(scene);
 
