@@ -11,15 +11,15 @@
 
 #include "gMacros.h"
 #include "cocos2d.h"
-#include <string>
+
 
 NAMESPACE_BEGIN
 class  gameLog
 {
 private:
     static gameLog* _instance;
-    std::string _errorlogpath;
-    std::string _debuglogpath;
+    std::string _errorlogpath;//errorlog文件的路径
+    std::string _debuglogpath;//debuglog文件的路径
     
     gameLog();
 public:
@@ -27,6 +27,7 @@ public:
     void release();
     
     static gameLog* getInstance();
+    
     
     /**
      @description  输出error日志
@@ -56,18 +57,14 @@ public:
     void cleanAllLog() const;
     
     /**
-     @description  用正则表达式查询结果
-     */
-    void* findWithRegEx(const char* rgx) const;
-    
-    /**
      @description  获取errorlog中的内容
      */
-    std::string& getErrorLogString() const;
+    std::string getErrorLogString() const;
     
     /**
      @description  获取debuglog中的内容
      */
+    std::string getDebugLogString() const;
 };
 
 NAMESPACE_END

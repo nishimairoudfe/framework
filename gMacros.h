@@ -14,4 +14,10 @@
 
 #define USING_GAME_FRAMEWORK using namespace gameFrameWork
 
+/**
+ @description 是否开启DEBUG
+ @param       1:开启  0:关闭
+ */
+#define DEBUG 1
+
 #endif /* gMacros_h */
