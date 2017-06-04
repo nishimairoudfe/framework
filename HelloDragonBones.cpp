@@ -1,4 +1,5 @@
 #include "HelloDragonBones.h"
+#include <fstream>
 
 USING_NS_CC;
 
@@ -53,6 +54,19 @@ bool HelloDragonBones::init()
     text->setAlignment(cocos2d::TextHAlignment::CENTER);
     this->addChild(text);
 
+    
+    //test git diff
+    auto str = cocos2d::FileUtils::getInstance()->getWritablePath();
+    cocos2d::log("%s\n", str.c_str());
+    auto logpath = str + "log";
+    std::ofstream file(logpath);
+    file<<"Hello world"<<std::endl;
+    
+    file.close();
+    
+    auto info = cocos2d::FileUtils::getInstance()->getStringFromFile(logpath);
+    cocos2d::log("%s",info.c_str());
+    
     return true;
 }
 
