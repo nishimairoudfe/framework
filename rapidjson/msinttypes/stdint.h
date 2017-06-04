@@ -166,8 +166,8 @@ typedef uint64_t  uint_fast64_t;
 #endif // _WIN64 ]
 
 // 7.18.1.5 Greatest-width integer types
-typedef int64_t   intmax_t;
-typedef uint64_t  uintmax_t;
+//typedef int64_t   intmax_t;
+//typedef uint64_t  uintmax_t;
 
 
 // 7.18.2 Limits of specified-width integer types
