@@ -6,9 +6,18 @@
 //
 //
 
-#ifndef UIData_hpp
-#define UIData_hpp
+#ifndef UIData_h
+#define UIData_h
 
 #include <stdio.h>
+#include "gMacros.h"
 
-#endif /* UIData_hpp */
+NAMESPACE_BEGIN
+
+NAMESPACE_END
+
+
+
+
+
+#endif /* UIData_h */

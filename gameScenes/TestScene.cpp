@@ -39,6 +39,7 @@ bool TestScene::init()
     auto text = gamelog->getErrorLogString();
     cocos2d::log("%s\n",text.c_str());
     
+    
     return true;
 }
 

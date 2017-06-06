@@ -6,4 +6,15 @@
 //
 //
 
-#include "gameObject.hpp"
+#include "gameObject.h"
+
+USING_GAME_FRAMEWORK;
+
+bool gameObject::init()
+{
+    if (!cocos2d::Node::init()) {
+        return false;
+    }
+    
+    return true;
+}

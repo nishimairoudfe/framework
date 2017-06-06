@@ -6,4 +6,25 @@
 //
 //
 
-#include "UIBase.hpp"
+#include "UIBase.h"
+
+USING_GAME_FRAMEWORK;
+
+bool UIBase::init()
+{
+    if (!Node::init()) {
+        return false;
+    }
+    
+    return true;
+}
+
+void UIBase::onEnter()
+{
+    Node::onEnter();
+}
+
+void UIBase::onExit()
+{
+    Node::onExit();
+}

@@ -4,11 +4,27 @@
 //
 //  Created by 杨吉 on 2017/6/6.
 //
-//
+//  游戏中的所有具有逻辑的对象
 
-#ifndef gameObject_hpp
-#define gameObject_hpp
+#ifndef gameObject_h
+#define gameObject_h
 
-#include <stdio.h>
+#include "gMacros.h"
+#include "cocos2d.h"
 
-#endif /* gameObject_hpp */
+NAMESPACE_BEGIN
+
+class gameObject:public cocos2d::Node
+{
+public:
+    CREATE_FUNC(gameObject);
+    virtual bool init();
+    
+    virtual void onEnter();
+    virtual void onExit();
+};
+
+NAMESPACE_END
+
+
+#endif /* gameObject_h */

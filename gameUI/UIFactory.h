@@ -6,9 +6,24 @@
 //
 //
 
-#ifndef UIFactory_hpp
-#define UIFactory_hpp
+#ifndef UIFactory_h
+#define UIFactory_h
 
-#include <stdio.h>
+#include "UIBase.h"
 
-#endif /* UIFactory_hpp */
+class UIData;
+
+NAMESPACE_BEGIN
+
+class UIFactory
+{
+public:
+    /**
+     @description   从文件中加载UI信息
+     @param         filepath保存的是UI文件的路径
+     */
+    UIData *loadUIFromFile(std::string &filepath) const;
+};
+
+NAMESPACE_END
+#endif /* UIFactory_h */
