@@ -11,6 +11,7 @@
 #include "gameLog.h"
 
 USING_GAME_FRAMEWORK;
+using namespace cocos2d;
 
 cocos2d::Scene* TestScene::createScene()
 {
@@ -36,8 +37,9 @@ bool TestScene::init()
     //gamelog->logError("Failed to load Sprite xxx.png.");
     //gamelog->logError("Failed to load Sprite xxx.png.");
     
-    auto text = gamelog->getErrorLogString();
-    cocos2d::log("%s\n",text.c_str());
+    //auto text = gamelog->getErrorLogString();
+    cocos2d::log("%s\n",cocos2d::FileUtils::getInstance()->getWritablePath().c_str());
+    
     
     
     return true;
